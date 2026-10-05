@@ -1,0 +1,20 @@
+'''
+Create a dictionary called lett_d that keeps track of all of the characters in the string product
+and notes how many times each character was seen. Then, find the key with the highest value in this
+dictionary and assign that key to key_with_max_value.
+'''
+
+
+
+product = "iphone and android phones"
+lett_d={}
+for c in product:
+    if c not in lett_d:
+        lett_d[c]=0
+    lett_d[c]=lett_d[c]+1
+
+y=lett_d.keys()
+key_with_max_value=list(y)[0]
+for c in product:
+    if lett_d[c]>lett_d[key_with_max_value]:
+        key_with_max_value=c
